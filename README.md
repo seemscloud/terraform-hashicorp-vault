@@ -1,14 +1,15 @@
-### Cert Manager - Issuer
+### Cert Manager - Cluster Issuer
 
 ```bash
 kubectl create secret generic vault-token-clusterissuer \
+  --namespace="cert-manager-system" \
   --from-literal=token="hvs.EqbmHiyE4l1PNr8ZSgRqje98"
 
 ```
 
 ```yaml
 apiVersion: cert-manager.io/v1
-kind: Issuer
+kind: ClusterIssuer
 metadata:
   name: vault
   namespace: vault-system
