@@ -14,7 +14,7 @@ resource "vault_kubernetes_auth_backend_role" "example" {
     "kv-foo",
     "default"
   ]
-  
+
   depends_on = [
     vault_auth_backend.kubernetes
   ]

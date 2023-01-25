@@ -2,20 +2,20 @@
 #
 #   Auth LDAP (Group Binding)
 #
-resource "vault_ldap_auth_backend_group" "group" {
-  groupname = "groups"
-
-  policies = [
-    "capabilities-self",
-    "kv-foo",
-    "kv-bar"
-  ]
-
-  backend = vault_ldap_auth_backend.ldap.path
-  depends_on = [
-    vault_ldap_auth_backend.ldap
-  ]
-}
+#resource "vault_ldap_auth_backend_group" "group" {
+#  groupname = "groups"
+#
+#  policies = [
+#    "capabilities-self",
+#    "kv-foo",
+#    "kv-bar"
+#  ]
+#
+#  backend    = vault_ldap_auth_backend.ldap.path
+#  depends_on = [
+#    vault_ldap_auth_backend.ldap
+#  ]
+#}
 
 #####################################
 #
