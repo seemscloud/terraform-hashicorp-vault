@@ -14,6 +14,6 @@ terraform {
 }
 
 provider "vault" {
-  token   = "hvs.jGCTvlwYorKMicVq5SO3l89a"
+  token   = "hvs.EqbmHiyE4l1PNr8ZSgRqje98"
   address = "http://172.18.0.128:8200"
 }
