@@ -5,9 +5,8 @@
 resource "vault_kv_secret_backend_v2" "kv-foo" {
   mount = vault_mount.kv-foo.path
 
-  max_versions         = 10
-  delete_version_after = 2592000
-  cas_required         = true
+  delete_version_after = 0
+  cas_required         = false
 
   depends_on = [
     vault_mount.kv-foo,
@@ -16,11 +15,10 @@ resource "vault_kv_secret_backend_v2" "kv-foo" {
 }
 
 resource "vault_kv_secret_backend_v2" "kv-bar" {
-  mount = vault_mount.kv-foo.path
+  mount = vault_mount.kv-bar.path
 
-  max_versions         = 10
-  delete_version_after = 2592000
-  cas_required         = true
+  delete_version_after = 0
+  cas_required         = false
 
   depends_on = [
     vault_mount.kv-bar,
