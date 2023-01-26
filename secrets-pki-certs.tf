@@ -85,8 +85,8 @@ resource "vault_pki_secret_backend_role" "role" {
   key_type = "rsa"
   key_bits = 2048
 
-  ttl     = "30d"
-  max_ttl = "90d"
+  ttl     = 2592000
+  max_ttl = 7776000
 
   allowed_domains  = ["seems.cloud"]
   allowed_uri_sans = ["seems.cloud"]
